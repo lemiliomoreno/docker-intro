@@ -1,0 +1,25 @@
+services:
+  db:
+    image: public.ecr.aws/docker/library/mongo:4.4.6
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=academia
+      - MONGO_INITDB_ROOT_PASSWORD=academia
+      - MONGO_INITDB_DATABASE=academia
+    networks:
+      - academia
+
+  api:
+    build:
+      context: api
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=academia
+      - MONGO_INITDB_ROOT_PASSWORD=academia
+    networks:
+      - academia
+
+networks:
+  academia:

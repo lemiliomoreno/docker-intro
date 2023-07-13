@@ -1,0 +1,3 @@
+services:
+  api:
+    image: 283249935153.dkr.ecr.us-west-2.amazonaws.com/academia:latest
