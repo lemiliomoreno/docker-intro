@@ -35,7 +35,7 @@ docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${AWS_
 Windows
 
 ```bat
-set AWS_ACCOUNT_ID=283249935153
+set AWS_ACCOUNT_ID=<AWS_ACCOUNT_ID>
 set AWS_DEFAULT_REGION=us-west-2
 set AWS_ECR_REPOSITORY_NAME=academia
 set DOCKER_IMAGE_TAG=latest
